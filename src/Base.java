@@ -7,13 +7,7 @@ public class Base  {
         }
     }
 
-    public  static int calculateTotalSalaty() {
-        int sum = 0;
-        for (Employee employee : employees) {
-            sum += employee.getSalary();
-        }
-        return sum;
-    }
+
 
     public static Employee findEmployeeWithMinSalaty() {
         Employee result = employees[0];
@@ -39,16 +33,10 @@ public class Base  {
         return result;
     }
 
-    public static float calculateAverageSalaty() {
-        return calculateTotalSalaty() / Employee.getCounter();
-    }
 
 
-    public static void printFullNames() {
-        for (Employee employee : employees) {
-            System.out.println(employee.getName());
-        }
-    }
+
+
 
 
     public static void main(String[] args) {
@@ -65,9 +53,8 @@ public class Base  {
                 new Employee("Бенисио Д.Торро", 170000,3 ),
         };
         employees[0] = new Employee("Джон Коннор",150000,1 );
-        printFullNames();
         printEmployees();
-        System.out.println("avg =  " + calculateAverageSalaty());
+
         System.out.println("----high-----");
     }
 }
